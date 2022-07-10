@@ -1,0 +1,17 @@
+set env var:
+  - export 'C:\Users\S\PycharmProjects\pp_pyspark_category_classification\venv\Scripts\python.exe'
+  - set PYSPARK_PYTHON = C:\Users\S\PycharmProjects\pp_pyspark_category_classification\venv\Scripts\python.exe
+  - $Env:PYSPARK_PYTHON = "C:\Users\S\PycharmProjects\pp_pyspark_category_classification\venv\Scripts\python.exe"
+  - os.environ["PYSPARK_PYTHON"] = r"C:\Users\S\PycharmProjects\pp_pyspark_category_classification\venv\Scripts\python.exe"
+
+run cmd:
+  - spark-submit --driver-memory 8G --conf spark.driver.maxResultSize="0" main.py
+  -
+
+error:
+  - Failed to execute user defined function (ProbabilisticClassificationModel$$Lambda$5065/1707099372:
+    - (struct<type:tinyint,size:int,indices:array<int>,values:array<double>>) => 
+       struct<type:tinyint,size:int,indices:array<int>,values:array<double>>)
+
+  - https://stackoverflow.com/questions/70981458/how-to-resolve-this-error-py4jjavaerror-an-error-occurred-while-calling-o70-sh
+  - https://stackoverflow.com/questions/58416527/pyspark-user-defined-functions-inside-of-a-class

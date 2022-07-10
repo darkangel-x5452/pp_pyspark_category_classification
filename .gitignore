@@ -1,3 +1,8 @@
+example
+.idea
+data/raw/dataset_en_train.json
+data/raw/dataset_en_test.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
