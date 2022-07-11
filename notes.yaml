@@ -19,7 +19,7 @@ error:
 
 
 cluster:
-  - spark-class org.apache.spark.deploy.master.Master
+  - spark-class org.apache.spark.deploy.master.Master  --host <IP_Addr>
     -  http://laptop:8080
   - spark-class org.apache.spark.deploy.worker.Worker  spark://master_ip
   - local -> spark://<MASTER-IP>:7077
