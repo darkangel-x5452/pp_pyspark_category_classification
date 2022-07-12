@@ -10,7 +10,9 @@ from pyspark.sql import SparkSession
 import pyspark.sql.functions as sqlf
 import nltk
 from nltk.corpus import stopwords
+# from dotenv import load_dotenv
 
+# load_dotenv()
 nltk.download('stopwords')
 
 
@@ -19,7 +21,7 @@ if __name__ == '__main__':
     spark = SparkSession\
         .builder\
         .appName("multilayer_perceptron_classification_example")\
-        .master('local[*]')\
+        .master(master_ip)\
         .config("spark.driver.memory", "4G")\
         .config("spark.driver.core", "4")\
         .config("spark.executor.core", "4")\
@@ -140,7 +142,7 @@ if __name__ == '__main__':
     result_pd['probability'] = result_pd['probability'].astype('str')
     result_pd.to_parquet('./data/results/classification_results.parquet')
 
-    print(f'{datetime.datetime.now()}, save model')
+    # print(f'{datetime.datetime.now()}, save model')
     # model.write().overwrite().save('./artifacts/classification_model')
     # model.save('./artifacts/classification_model')
     print('bye')

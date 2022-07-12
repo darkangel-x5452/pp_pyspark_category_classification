@@ -21,5 +21,8 @@ error:
 cluster:
   - spark-class org.apache.spark.deploy.master.Master  --host <IP_Addr>
     -  http://laptop:8080
-  - spark-class org.apache.spark.deploy.worker.Worker  spark://master_ip
+  - spark-class org.apache.spark.deploy.worker.Worker spark://master_ip
   - local -> spark://<MASTER-IP>:7077
+  -C:\Users\S\AppData\Local\spark\spark-3.3.0-bin-hadoop3
+
+spark-submit --driver-memory 8G --conf spark.driver.maxResultSize="1G" main_mlflow.py

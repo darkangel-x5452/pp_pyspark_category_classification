@@ -2,6 +2,7 @@ example
 .idea
 data/raw/dataset_en_train.json
 data/raw/dataset_en_test.json
+mlruns
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
