@@ -10,7 +10,7 @@ from pyspark.sql import SparkSession
 import pyspark.sql.functions as sqlf
 import nltk
 from nltk.corpus import stopwords
-
+import sklearn
 import mlflow
 import hyperopt
 from hyperopt import pyll
@@ -128,11 +128,6 @@ test_feats_df_cln, nfeat_vec = myFunc(test_label_df, nfeat_vec)
 
 
 if __name__ == '__main__':
-
-
-
-
-
 
     # print(f'{datetime.datetime.now()}, make model')
     # layers = [nfeat_vec, int(nfeat_vec/2), int(nfeat_vec/4),int(nfeat_vec/10), int(nfeat_vec/4), int(nfeat_vec/2), int(nfeat_vec/10), 5]
